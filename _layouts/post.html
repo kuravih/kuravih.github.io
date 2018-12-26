@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<header class="masthead">
+  <h1 class="masthead-title"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+  <nav class="masthead-nav">
+    {% for nav in site.nav %}
+    <a href="{{ nav.href }}">{{ nav.name }}</a>
+    {% endfor %}
+  </nav>
+</header>
+
+<div class="content post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <div class="post-sub">
+    <div class="post-date">
+      <time>{{ page.date | date_to_string }}</time>
+    </div>
+    <div class="post-tags">
+      <span>
+        {% for tag in page.tags %}
+        {% capture tag_name %}{{ tag }}{% endcapture %}
+        <a href="/archive.html"><nobr>{{ tag_name }}</nobr>&nbsp;</a>
+        {% endfor %}
+      </span>
+    </div>
+  </div>
+  {{ content }}
+</div>
+
+
