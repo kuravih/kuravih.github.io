@@ -1,0 +1,44 @@
+---
+layout: default
+permalink: /
+---
+<header class="masthead">
+  <h1 class="masthead-title">
+    <a href="{{ site.baseurl }}/">{{ site.name }}</a>
+  </h1>
+  <nav class="masthead-nav">
+    {% for nav in site.nav %}
+    <a href="{{ nav.href }}">{{ nav.name }}</a>
+    {% endfor %}
+  </nav>
+</header>
+
+<div class="content list">
+  {% if site.posts.size == 0 %}
+  <h2>No post found</h2>
+  {% else %}
+
+  {% for post in site.posts %}
+  <div class="list-item">
+
+    <h6 class="list-post-title">
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </h6>
+
+    <div class="list-post-sub">
+      <div class="list-post-date">
+        <time>{{ post.date | date_to_string }}</time>
+      </div>
+      <div class="list-post-tags">
+        <span>
+          {% for tag in post.tags %}
+            <a href="/archive.html#{{ tag }}"><nobr>{{ tag }}</nobr></code>&nbsp;</a>
+          {% endfor %}
+        </span>
+      </div>
+    </div>
+
+  </div>
+{% endfor %}
+{% endif %}
+</div>

@@ -1,0 +1,51 @@
+# Basic
+name: "Untitled"
+description: "Personal website"
+
+# jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
+url: "//kuravih.github.io"
+author: "kuravih"
+twitter:
+  username: "kuravih"
+
+# URL
+baseurl: "" #For Root Domain
+permalink: /:year/:month/:day/:title/
+
+# Markdown
+markdown: kramdown
+highlighter: rouge
+
+include: ['_pages']
+
+# Navigation
+nav:
+  - name: "Blog"
+    href: "/"
+  - name: "About"
+    href: "/about.html"
+  - name: "GitHub"
+    href: "https://github.com/kuravih"
+  - name: "Contact"
+    href: "/contact.html"
+
+# Sass
+sass:
+  style: :compressed
+
+# Scopes
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+plugins:
+  - jekyll-seo-tag
+  
