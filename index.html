@@ -13,32 +13,34 @@ permalink: /
   </nav>
 </header>
 
-<div class="content list">
-  {% if site.posts.size == 0 %}
-  <h2>No post found</h2>
-  {% else %}
-
-  {% for post in site.posts %}
-  <div class="list-item">
-
-    <h6 class="list-post-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-    </h6>
-
-    <div class="list-post-sub">
-      <div class="list-post-date">
-        <time>{{ post.date | date_to_string }}</time>
+<div class="content">
+  <div class="list">
+    {% if site.posts.size == 0 %}
+      <h2>No post found</h2>
+    {% else %}
+    
+      {% for post in site.posts %}
+      <div class="list-item">
+        <h6 class="list-post-title">
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </h6>
+        <div class="list-post-sub">
+          <div class="list-post-date">
+            <time>{{ post.date | date_to_string }}</time>
+          </div>
+          <div class="list-post-tags">
+            <span>
+              {% for tag in post.tags %}
+                <a href="/archive.html#{{ tag }}"><nobr>{{ tag }}</nobr></code>&nbsp;</a>
+              {% endfor %}
+            </span>
+          </div>
+        </div>
       </div>
-      <div class="list-post-tags">
-        <span>
-          {% for tag in post.tags %}
-            <a href="/archive.html#{{ tag }}"><nobr>{{ tag }}</nobr></code>&nbsp;</a>
-          {% endfor %}
-        </span>
-      </div>
-    </div>
-
+      {% endfor %}
+    {% endif %}
   </div>
-{% endfor %}
-{% endif %}
+  <div class="footer">
+    Generated on {{ site.time | date: '%m/%d/%Y, %-I:%-M:%-S %p' }}
+  </div>
 </div>

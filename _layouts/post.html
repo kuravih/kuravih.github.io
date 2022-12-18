@@ -10,22 +10,28 @@ layout: default
   </nav>
 </header>
 
-<div class="content post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-sub">
-    <div class="post-date">
-      <time>{{ page.date | date_to_string }}</time>
+<div class="content">
+  <div class="post">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-sub">
+      <div class="post-date">
+        <time>{{ page.date | date_to_string }}</time>
+      </div>
+      <div class="post-tags">
+        <span>
+          {% for tag in page.tags %}
+          {% capture tag_name %}{{ tag }}{% endcapture %}
+          <a href="/archive.html"><nobr>{{ tag_name }}</nobr>&nbsp;</a>
+          {% endfor %}
+        </span>
+      </div>
     </div>
-    <div class="post-tags">
-      <span>
-        {% for tag in page.tags %}
-        {% capture tag_name %}{{ tag }}{% endcapture %}
-        <a href="/archive.html"><nobr>{{ tag_name }}</nobr>&nbsp;</a>
-        {% endfor %}
-      </span>
-    </div>
+    {{ content }}
   </div>
-  {{ content }}
+  {% if page.comments_id %}
+    {% include comments.html %}
+  {% endif %}
+  <div class="footer">
+    Generated on {{ site.time | date: '%m/%d/%Y, %-I:%-M:%-S %p' }}
+  </div>
 </div>
-
-

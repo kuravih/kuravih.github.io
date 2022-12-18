@@ -5,6 +5,7 @@ author: "Kuravi Hewawasam"
 date: 2022-11-05 00:00:00 -0500
 tags: [web, jekyll]
 mathjax: true
+comments_id: 2
 ---
 
 This page demonstrates the supported elements of the theme.
@@ -58,7 +59,7 @@ Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
 
 <!-------------------------------------------------------------------------------------------------------------------->
 ## Code
-Code snippets can be include as follows:
+Code snippets can be included as follows:
 
 ``` javascript
 function trigger_alert(){
@@ -124,14 +125,13 @@ Quisque volutpat mattis eros.
 Nullam malesuada erat ut turpis.
 Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
 
-![Example image](http://via.placeholder.com/200x200?text=Placeholder+image "Example image"){: .center }
+![Example image](http://via.placeholder.com/350x75?text=Placeholder+image "Example image"){: .center }
 
 Donec nec justo eget felis facilisis fermentum.
 Aliquam porttitor mauris sit amet orci.
 Aenean dignissim pellentesque felis.
 
-
-
+![Local image](/assets/img/example_png.png "Local image"){: .center }
 
 <!-------------------------------------------------------------------------------------------------------------------->
 ## Table
@@ -225,4 +225,4 @@ Embedding javascript canvas [Example](https://codepen.io/Munkkeli/pen/PqWBdP)
 ## SVG
 Embedding SVG [Example](https://codepen.io/guerreiro/pen/obhzc)
 
-{% include svg.html width="100%" height="160px" background="#FC0" %}
+![SVG](/assets/img/example_svg.svg){: .center width="100%" }
