@@ -125,7 +125,7 @@ Quisque volutpat mattis eros.
 Nullam malesuada erat ut turpis.
 Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
 
-![Example image](http://via.placeholder.com/350x75?text=Placeholder+image "Example image"){: .center }
+![Example image](https://via.placeholder.com/350x75?text=Placeholder+image "Example image"){: .center }
 
 Donec nec justo eget felis facilisis fermentum.
 Aliquam porttitor mauris sit amet orci.
