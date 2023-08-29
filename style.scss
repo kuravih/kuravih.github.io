@@ -429,12 +429,14 @@ figure {
     .leave-a-comment {
       font-style: italic;
       font-size: 0.75rem;
+      // padding: 0 0 0 1em;
     }
 
     #gh-comments-list {
       list-style: none;
       list-style-type: none;
-      padding: 0;
+      // padding: 0;
+      padding: 0 0.5em 0 0.5em;
       li {
         margin: 0;
         padding: 1em 0 0 0;
@@ -442,6 +444,7 @@ figure {
         grid-template-columns: 2.5em 1fr;
         // border-top: 1px dotted $color-borders;
         overflow-x: auto;
+        // border-bottom:1px dotted #e5e5e5;
 
         >a.user {
           width: 2.5em;
