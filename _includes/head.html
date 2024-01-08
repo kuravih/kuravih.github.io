@@ -1,19 +1,29 @@
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
-  <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/jekyll-github.css">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+        <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+        <link id="syntax-css" rel="stylesheet" href="{{ site.baseurl }}/assets/css/native.css">
+        <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.name }}" href="{{ site.baseurl }}/feed.xml" />
 
-  <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.name }}" href="{{ site.baseurl }}/feed.xml" />
+        {% if page.mathjax %}
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        {% endif %}
 
-  {% if page.mathjax %}
-  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-  {% endif %}
+        {% if page.pannellum %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+        {% endif %}
 
-  {% if site.tags != "" %}
-    {% include collecttags.html %}
-  {% endif %}
+        {% if page.glmatrix %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js" integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ==" crossorigin="anonymous" defer></script>
+        {% endif %}
 
-  {% seo %}
-</head>
+        {% if site.tags != "" %}
+            {% include collecttags.html %}
+        {% endif %}
+
+        {% seo %}
+    </head>
+
+

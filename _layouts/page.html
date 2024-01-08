@@ -1,23 +1,11 @@
 ---
 layout: default
 ---
-<header class="masthead">
-  <h1 class="masthead-title">
-    <a href="{{ site.baseurl }}/">{{ site.name }}</a>
-  </h1>
-  <nav class="masthead-nav">
-    {% for nav in site.nav %}
-    <a href="{{ nav.href }}">{{ nav.name }}</a>
-    {% endfor %}
-  </nav>
-</header>
-
-<div class="content">
-  <div class="page">
-    <h1 class="page-title">{{ page.title }}</h1>
-    {{ content }}
-  </div>
-  <div class="footer">
-    Generated on {{ site.time | date: '%m/%d/%Y, %-I:%-M:%-S %p' }}
-  </div>
-</div>
+{% include header.html %}
+            <div class="content">
+                <div class="page">
+                    <h1 class="page-title">{{ page.title }}</h1>
+                    {{ content }}
+                </div>
+            </div>
+{% include footer.html %}

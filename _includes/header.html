@@ -1,0 +1,20 @@
+    <header class="masthead">
+                <div class="masthead-nav">
+                    <script src="/assets/js/modeswitcher.js"></script>
+                    <div><img class="avatar" src="https://avatars.githubusercontent.com/u/7969796?v=4"></div>
+                    <input id="masthead-nav-menu-toggle" type="checkbox"/>
+                    <label class='masthead-nav-menu-button-container' for="masthead-nav-menu-toggle"><div class='masthead-nav-menu-button'></div></label>
+                    <ul class="masthead-nav-menu">
+                        {% for nav in site.nav %}
+                        <li><a href="{{ nav.href }}">{{ nav.name }}</a></li>
+                        {% endfor %}  
+                        <li><img class="icon" src="{{ '/assets/img/moon.svg' | relative_url }}" onclick="modeSwitcher()" id="theme-toggle-img"></li>
+                    </ul>
+                </div>
+            </header>
+
+            <script>
+                window.addEventListener('DOMContentLoaded', function() {
+                    initTheme()
+                });
+            </script>

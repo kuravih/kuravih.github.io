@@ -5,7 +5,7 @@ author: "Kuravi Hewawasam"
 date: 2022-11-05 00:00:00 -0500
 tags: [web, jekyll]
 mathjax: true
-comments_id: 2
+comments_id: 1
 ---
 
 This page demonstrates the supported elements of the theme.
@@ -216,7 +216,7 @@ Embedding gists
 ## Javascript canvas
 Embedding javascript canvas [Example](https://codepen.io/Munkkeli/pen/PqWBdP)
 
-{% include canvas.html id="canvas_example" script="canvas_example.js" width="100%" height="160px" background="#05BBD3" %}
+{% include canvas.html id="canvas_example" script="canvas_example.js" width="100%" height="160px" background="#05BBD3"  type="text/javascript" %}
 
 
 

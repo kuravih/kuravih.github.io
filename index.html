@@ -2,23 +2,12 @@
 layout: default
 permalink: /
 ---
-<header class="masthead">
-  <h1 class="masthead-title">
-    <a href="{{ site.baseurl }}/">{{ site.name }}</a>
-  </h1>
-  <nav class="masthead-nav">
-    {% for nav in site.nav %}
-    <a href="{{ nav.href }}">{{ nav.name }}</a>
-    {% endfor %}
-  </nav>
-</header>
-
+{% include header.html %}
 <div class="content">
   <div class="list">
     {% if site.posts.size == 0 %}
       <h2>No post found</h2>
     {% else %}
-    
       {% for post in site.posts %}
       <div class="list-item">
         <h6 class="list-post-title">
@@ -40,7 +29,5 @@ permalink: /
       {% endfor %}
     {% endif %}
   </div>
-  <div class="footer">
-    Generated on {{ site.time | date: '%m/%d/%Y, %-I:%-M:%-S %p' }}
-  </div>
 </div>
+{% include footer.html %}
