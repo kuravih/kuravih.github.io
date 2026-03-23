@@ -46,6 +46,9 @@ defaults:
     values:
       layout: "post"
 
+jekyll-tsc:
+  destination: "assets/js"
+
 plugins:
   - jekyll-seo-tag
-  
+  - jekyll-tsc
