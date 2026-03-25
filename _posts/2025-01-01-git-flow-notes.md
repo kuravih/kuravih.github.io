@@ -2,7 +2,6 @@
 title:  "Gitflow notes"
 date:  2025-01-01 12:00:00 -0400
 tags:  [git]
-comments_id:  3
 ---
 
 Guidelines for setting up and managing a repository with [Gitflow][gitflow_link]:
